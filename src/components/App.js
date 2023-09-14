@@ -7,7 +7,7 @@ import Alert from './Alert';
 import About from './About';
 import axios from 'axios';
 import UserDetails from './UserDetails'
-import GithubState from '../context/githubState'
+import GithubState from '../context/github/githubState'
 
 const App = () => {
   const [alert, setAlert] = useState (null)
