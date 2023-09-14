@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Route, Switch, link, NavLink } from 'react-router-dom/cjs/react-router-dom';
 import Navbar from './Navbar'
-import Users from './Users';
 import NotFound from './NotFound';
-import Search from './Search';
+import Home from './Home';
 import Alert from './Alert';
 import About from './About';
 import UserDetails from './UserDetails'
@@ -18,13 +17,7 @@ const App = () => {
                 <Navbar />
                 <Alert/>
                 <Switch>
-                      <Route exact path="/" render={ props => (
-                          <>
-                            <Search />
-                            <Users />
-                          </>
-                        )
-                      }/>
+                      <Route exact path="/" component={Home}/>
                       <Route path="/about" component={About} />
                       <Route path="/user/:login" component={UserDetails}/>
                       <Route component={NotFound}/>
